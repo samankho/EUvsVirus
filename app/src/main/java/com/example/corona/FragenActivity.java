@@ -64,7 +64,7 @@ public class FragenActivity extends Activity implements View.OnClickListener {
 
         _aktuelleFrage.setText(aktuelleFrage);
 
-        // Zufällige Anordnungen der Antworten
+        // Zufällige Anordnungen der Antworten (4!/3!)
         int randomAnordnung = new Random().nextInt(8) + 1;
 
         switch(randomAnordnung)
@@ -78,59 +78,25 @@ public class FragenActivity extends Activity implements View.OnClickListener {
 
             case 2:
                 _antwortbtn1.setText(falscheAntwort4);
-                _antwortbtn2.setText(falscheAntwort3);
+                _antwortbtn2.setText(richtigeAntwort1);
                 _antwortbtn3.setText(falscheAntwort2);
-                _antwortbtn4.setText(richtigeAntwort1);
+                _antwortbtn4.setText(falscheAntwort3);
                 break;
 
             case 3:
-                _antwortbtn1.setText(falscheAntwort2);
-                _antwortbtn2.setText(richtigeAntwort1);
-                _antwortbtn3.setText(falscheAntwort3);
-                _antwortbtn4.setText(falscheAntwort4);
+                _antwortbtn1.setText(falscheAntwort3);
+                _antwortbtn2.setText(falscheAntwort4);
+                _antwortbtn3.setText(richtigeAntwort1);
+                _antwortbtn4.setText(falscheAntwort2);
                 break;
 
             case 4:
-                _antwortbtn1.setText(falscheAntwort3);
-                _antwortbtn2.setText(falscheAntwort2);
-                _antwortbtn3.setText(richtigeAntwort1);
-                _antwortbtn4.setText(falscheAntwort4);
-                break;
-
-            case 5:
-                _antwortbtn1.setText(falscheAntwort4);
-                _antwortbtn2.setText(richtigeAntwort1);
-                _antwortbtn3.setText(falscheAntwort2);
-                _antwortbtn4.setText(falscheAntwort3);
-                break;
-
-            case 6:
-                _antwortbtn1.setText(falscheAntwort4);
-                _antwortbtn2.setText(falscheAntwort2);
-                _antwortbtn3.setText(falscheAntwort3);
+                _antwortbtn1.setText(falscheAntwort2);
+                _antwortbtn2.setText(falscheAntwort3);
+                _antwortbtn3.setText(falscheAntwort4);
                 _antwortbtn4.setText(richtigeAntwort1);
                 break;
 
-            case 7:
-                _antwortbtn1.setText(falscheAntwort4);
-                _antwortbtn2.setText(falscheAntwort3);
-                _antwortbtn3.setText(richtigeAntwort1);
-                _antwortbtn4.setText(falscheAntwort2);
-                break;
-
-            case 8:
-                _antwortbtn1.setText(falscheAntwort3);
-                _antwortbtn2.setText(falscheAntwort4);
-                _antwortbtn3.setText(richtigeAntwort1);
-                _antwortbtn4.setText(falscheAntwort2);
-                break;
-
-            case 9:
-                _antwortbtn1.setText(falscheAntwort2);
-                _antwortbtn2.setText(falscheAntwort4);
-                _antwortbtn3.setText(richtigeAntwort1);
-                _antwortbtn4.setText(falscheAntwort3);
-                break;
 
 
         }
