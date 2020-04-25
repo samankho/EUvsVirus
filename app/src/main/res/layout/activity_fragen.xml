@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".FragenActivity">
+
+    <TextView
+        android:id="@+id/aktuelleFrage"
+        android:layout_width="match_parent"
+        android:layout_height="224dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="0dp"
+        android:text="FRAGE PLACEHOLDER"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/antwortbtn1"
+        android:layout_width="166dp"
+        android:layout_height="98dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="204dp"
+        android:background="#ffffff"
+        android:textColor="#1D014E"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/antwortbtn2"
+        android:layout_width="166dp"
+        android:layout_height="98dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="204dp"
+        android:background="#ffffff"
+        android:textColor="#1D014E" />
+
+    <Button
+        android:id="@+id/antwortbtn3"
+        android:layout_width="166dp"
+        android:layout_height="98dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="76dp"
+        android:background="#ffffff"
+        android:textColor="#1D014E" />
+
+    <Button
+        android:id="@+id/antwortbtn4"
+        android:layout_width="166dp"
+        android:layout_height="98dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="76dp"
+        android:background="#ffffff"
+        android:textColor="#1D014E" />
+
+</RelativeLayout>
