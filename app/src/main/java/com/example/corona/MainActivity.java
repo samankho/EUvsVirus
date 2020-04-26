@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent nextActivty = new Intent(this, FragenActivity.class);
         startActivity(nextActivty);
+        finish();
 
     }
 

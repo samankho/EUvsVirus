@@ -30,6 +30,7 @@ public class Gameover extends AppCompatActivity {
     private void loadMenue(View v)
     {
         startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
 }

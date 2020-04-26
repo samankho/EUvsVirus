@@ -23,5 +23,6 @@ public class Gewinner extends AppCompatActivity {
     private void loadMenue(View v)
     {
         startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }

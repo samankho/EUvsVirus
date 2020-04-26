@@ -62,7 +62,11 @@ public class FragenActivity extends Activity implements View.OnClickListener
 
         // Alle Fragen richtig beantwortet?
         if(aktuelleFrageCount == maximaleAnzahlFragen)
+        {
             startActivity(new Intent(this, Gewinner.class));
+            finish();
+        }
+
 
         String aktuelleFrage = _fragenSammlung[aktuelleFrageCount][0];
         String richtigeAntwort1 = _fragenSammlung[aktuelleFrageCount][1];
@@ -125,6 +129,7 @@ public class FragenActivity extends Activity implements View.OnClickListener
                 {
                     punkte = aktuelleFrageCount;
                     startActivity(new Intent(this, Gameover.class));
+                    finish();
                 }
                 break;
 
@@ -139,6 +144,7 @@ public class FragenActivity extends Activity implements View.OnClickListener
                 {
                     punkte = aktuelleFrageCount;
                     startActivity(new Intent(this, Gameover.class));
+                    finish();
                 }
                 break;
 
@@ -153,6 +159,7 @@ public class FragenActivity extends Activity implements View.OnClickListener
                 {
                     punkte = aktuelleFrageCount;
                     startActivity(new Intent(this, Gameover.class));
+                    finish();
                 }
                 break;
 
@@ -167,6 +174,7 @@ public class FragenActivity extends Activity implements View.OnClickListener
                 {
                     punkte = aktuelleFrageCount;
                     startActivity(new Intent(this, Gameover.class));
+                    finish();
                 }
                 break;
         }

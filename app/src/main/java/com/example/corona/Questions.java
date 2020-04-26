@@ -94,7 +94,6 @@ public class Questions
                 "Brunei",
                         "Gabon",
                 "Rwanda"},
-            {"Welche Länder/Regionen sind nicht von Erkrankungen mit dem neuartigen Coronavirus betroffen ?", "", "", "", ""},
             {"Welche Länder/Regionen sind nicht von Erkrankungen mit dem neuartigen Coronavirus betroffen ?", "Tadschikistan",
                 "Burundi",
                         "Cuba",
