@@ -25,7 +25,12 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -37,19 +42,35 @@
       </list>
     </option>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
   <component name="ProjectId" id="1aztVgmbwPmk4ik5y7jvv80tIKN" />
   <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="app" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="f177d152" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-25T11:28:53.397Z" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/values" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Desktop\Projekte\Corona\app\src\main\res\questions" />
+      <recent name="D:\Desktop\Projekte\Corona\app\src\main\res\raw" />
+      <recent name="D:\Desktop\Projekte\Corona\app\src\main\res\background" />
+      <recent name="D:\Desktop\Projekte\Corona\app\src\main\res\drawable-v24" />
+    </key>
     <key name="android.template.packageName">
       <recent name="com.example.corona" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\Projekte\Corona" />
+      <recent name="D:\Desktop\Projekte\Corona\music" />
+      <recent name="D:\Desktop\Projekte\Corona\app\src\main\res\raw" />
     </key>
   </component>
   <component name="RunDashboard">

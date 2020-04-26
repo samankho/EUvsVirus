@@ -2,38 +2,261 @@ package com.example.corona;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Questions
 {
 
-    private String[][] fragen;
-    private Scanner zeilenscan;
-    private File questionsfile;
+    public static final String[][] Fragen  = new String[][] {
+            {"Wieviele Tage vor dem Auftreten von Krankheitszeichen kann eine Übertragung stattfinden ?", "3 Tage", "5 Tage", "1 Tag", "Am selben Tag"},
+            {"Wie groß sollte der Abstand zu anderen Menschen sein, um das Risiko einer Übertragung zu vermindern ?", "1.5 Meter", "2 Meter", "2.5 Meter", "1 Meter"},
+            {"Wie wird das neuartige Coronavirus übertragen ?", "Von Mensch zu Mensch",
+                    "Von Tier zu Mensch",
+                    "Erst durch die Einnahme bestimmter Medikamente wird man dafür anfällig",
+                    "Es ist noch völlig unklar"},
+            {"Was ist der Hauptübertragungsweg des neuartigen Coronavirus ?", "Tröpfcheninfektion",
+                    "Aerosole",
+                    "Schmierinfektion",
+                    "Unbekannt"},
+            {"Können Haustiere das neuartige Coronavirus übertragen ?", "Nein",
+                    "Es wurde bisher bei Hunden nachgewiesen",
+                    "Es wurde bisher bei Katzen nachgewiesen",
+                    "Ja Tiere sind genauso betroffen wie Menschen"},
+            {"Wie lange ist die Inkubationszeit im Schnitt ?", "5-6 Tage",
+                    "14 Tage",
+                    "9-10 Tage",
+                    "20-21 Tage"},
+            {"Wie lange ist die Inkubationszeit im Schnitt ?", "5-6 Tage",
+                    "14 Tage",
+                    "9-10 Tage",
+                    "20-21 Tage"},
+            {"Was sind die häufigsten Krankheitszeichen ?", "Husten und Fieber",
+                    "Atemnot und Schnupfen",
+                    "Müdigkeit und Gelenkschmerzen",
+                    "Kopfschmerzen und Schwindel"},
+            {"Welche Personen sind besonders häufig von einem schweren Verlauf der Erkrankung betroffen ?", "Ältere Personen ab ca 60 Jahren",
+                    "Jede Person",
+                    "Kinder",
+                    "Personen ab 40 Jahren"},
+            {"Angenommen, der Krankheitsverlauf verläuft mild: Wie lange dauert es, bis man wieder gesund ist ?", "Spätestens nach 14 Tagen",
+                   "Spätestens nach 7 Tagen",
+                    "Spätestens nach einem Monat",
+                    "Spätestens nach 21 Tagen"},
+            {"Kann man eine durchgemachten Erkrankung an COVID-19 im Blut nachweisen ?", "10 Tage nach Ansteckung sind Antikörper nachweisbar",
+                    "Nein",
+                    "1 Monat nach Ansteckung sind Antikörper nachweisbar",
+                    "Es ist noch weitgehend unbekannt"},
+            {"Was ist über die Schwere des Krankheitsverlaufs bei Schwangeren bekannt ?", "Kein erhöhtes Risiko",
+                    "20% scheinen anfälliger zu sein",
+                    "50% scheinen anfälliger zu sein",
+                    "35% scheinen anfälliger zu sein"},
+            {"Was ist der bedeutendste Unterschied zwischen der Corona-Pandemie und einer Gruppewelle ?", "Die Schnelligkeit der Ausbreitung",
+                    "Die Schwere des Krankheitsverlaufs",
+                    "Beides ist identisch",
+                    "Die Art der Ausbreitung"},
+            {"Macht es Sinn, ein Test auf das Coronavirus bei Personen ohne Krankheitsanzeichen durchzuführen ?", "Nein, weil eine Person sich trotzdem noch anstecken kann",
+                    "Ja, weil eine Person krank sein kann, ohne Symptome zu zeigen",
+                    "Nein, weil die vorhandenen Tests sehr ungenau sind und Ergebnisse ohne Krankheitszeichen weniger valide sind als ohnehin schon",
+                    "Ja da solche Tests mittlerweile sehr schnell durchgeführt werden können und massenhaft vorhanden sind"},
+            {"Was sollte man tun, wenn man Husten oder Fieber hat ?", "Das Aufsuchen einer Arztpraxis mit vorheriger Ankündigung",
+                    "Direkt in ein Krankenhaus in unmittelbarer Umgebung",
+                    "Schnellstmöglich zum eigenen Hausarzt",
+                    "48 Stunden abwarten und den weiteren Verlauf abwarten"},
+            {"Wer entscheidet, ob jemand getestet wird ?", "Die Haus-/Amtsärzte oder die Klinik",
+            "Das Gesundheitsamt",
+            "Der Sachverständige im Bezirk",
+            "Das Amt für Infektionsschutz"},
+            {"Welche spezifischen Behandlungsmöglichkeiten stehen für das neuartige Coronavirus zur Verfügung ?", "Keine",
+                "Ritonavir",
+                "Beta-Interferon",
+                "Hydroxychloroquin"},
+            {"Wieviel Prozent der an Corona infizierten Personen leiden unter einem schweren Krankheitsverlauf ?", "6%",
+                    "15%",
+                    "25%",
+                    "2%"},
+            {"Wieviel Prozent der COVID-19-Erkrankungen verlaufen mild ?", "Ca 80%",
+                    "Ca 60%",
+                    "Ca 95%",
+                    "Ca 45%"},
+            {"Wieviel Prozent der Patienten leiden unter Atemnot ?", "Ca 14 %",
+                    "Ca 5%",
+                    "Ca 23%",
+                    "Ca 34%"},
+            {"Welche Personen müssen in behördlich angeordnete Quarantäne ?", "Personen, die mindestens 15 Minuten mit einem Erkrankten gesprochen haben",
+                "Personen, die häufig niesen oder husten",
+                "ersonen, die mindestens 60 Jahre alt sind",
+                "Personen mit Vorerkrankungen"},
+            {"Welche Länder/Regionen sind nicht von Erkrankungen mit dem neuartigen Coronavirus betroffen ?", "Lesotho",
+                "Eritrea",
+                        "Chad",
+                "Laos"},
+            {"Welche Länder/Regionen sind nicht von Erkrankungen mit dem neuartigen Coronavirus betroffen ?", "Inselgruppe der Komoren",
+                "Brunei",
+                        "Gabon",
+                "Rwanda"},
+            {"Welche Länder/Regionen sind nicht von Erkrankungen mit dem neuartigen Coronavirus betroffen ?", "", "", "", ""},
+            {"Welche Länder/Regionen sind nicht von Erkrankungen mit dem neuartigen Coronavirus betroffen ?", "Tadschikistan",
+                "Burundi",
+                        "Cuba",
+                "Costa Rica"},
+            {"Welche Länder/Regionen sind nicht von Erkrankungen mit dem neuartigen Coronavirus betroffen ?", "Turkmenistan",
+                "Kirgisistan",
+                        "Kosovo",
+                "Oman"},
+            {"Welche Länder/Regionen haben weniger als 100 registrierte Corona-Infizierte ?", "Nauru",
+                "Vatikanstadt",
+                        "Togo",
+                "Monaco"},
+            {"Welche Länder/Regionen haben weniger als 100 registrierte Corona-Infizierte ?", "Chad",
+                "Trinidad & Tobago",
+                "Sudan",
+                "Äquatorial Guinea"},
+            {"Welche Länder/Regionen haben weniger als 100 registrierte Corona-Infizierte ?", "Jemen",
+                "Gabun",
+                        "Jamaika",
+                "Mazedonien"},
+            {"Welche Länder/Regionen haben weniger als 100 registrierte Corona-Infizierte ?", "Seychellen",
+                "Burma",
+                        "Malediven",
+                "Kambodscha"},
+            {"Welche Länder/Regionen haben weniger als 100 registrierte Corona-Infizierte ?", "Nepal",
+                "Senegal",
+                        "Libanon",
+                "Sri Lanka"},
+            {"Wieviele Menschen in Deutschland werden sich - Schätzungen zufolge - mit dem Coronavirus infizieren ?", "60-70%",
+                    "30-40%",
+                    "90-100%",
+                    "10-20%"},
+            {"Bei welcher Reproduktionszahl würde die Zahl der Neuerkrankungen zurückgehen ?","<1",
+                    "<2",
+                    "<3",
+                    "<4"},
+            {"Bei welcher Reproduktionszahl bleibt die Anzahl täglicher Neuinfektionen konstant ?", "1",
+                "0",
+                "2",
+                        "-1"},
+            {"Wieviele Personen würde eine infizierte Person anstecken, wenn keine Gegenmaßnahmen ergriffen würden ?", "2-3",
+                "4-5",
+                "0-1",
+                        ">5"},
+            {"Was versteht man unter der Reproduktionszahl ?", "Wie viele andere Menschen eine infizierte Person im Mittel ansteckt",
+                "Wie viele andere Menschen eine infizierte Person maximal ansteckt",
+                "Wie schnell sich das Virus durchschnittlich vermehrt",
+                "Wie schnell sich das Virus maximal vermehren kann"},
+            {"Angenommen, es würden keine Gegenmaßnahmen ergriffen: Wieviel Prozent der Bevölkerung müssten infiziert sein, damit sich das Virus nicht mehr weiterverbreiten kann ?", "Bis zu 70%", "Bis zu 50%",
+                    "Die gesamte Bevölkerung",
+                "Bis zu 90%"},
+            {"Was passiert mit einer Person, die von einer Auslandsreise zurück nach Deutschland kommen will ?", "Rückreisende müssen 14 Tage nach der Einreise in Quarantäne",
+                "Eine Person darf ohne Erlaubnis des Gesundheitsamtes nicht zurückreisen",
+                "Rückreisende müssen unverzüglich ins Krankenhaus und auf Corona getestet werden",
+                "Gar nichts"},
+            {"Was passiert mit einer Person, die von einer Auslandsreise zurück nach Deutschland kommen will ?", "Rückreisende müssen das zuständige Gesundheitsamt kontaktieren und auf ihre Einreise hinweisen",
+                "Rückreisende brauchen eine Bescheinigung des Gesundheitsamtes",
+                "Bei Grenzüberschreitung muss vor Ort ein Abstrich gemacht werden",
+                "Gar nichts"},
+            {"Woher stammt das neuartige Coronavirus angeblich ?", "Von Fledermäusen",
+                "Aus einem Labor",
+                "Von Hunden",
+                "Von Pangolinen"},
+            {"Wodurch wird die Atemwegserkrankung COVID-19 ausgelöst ?", "SARS-CoV-2",
+                "SARS",
+                        "Bronchitis",
+                "COPD"},
+            {"Was ist mRNA ?", "Eine kurzlebige einzelsträngige Boten-RNA",
+                "Eine kurzlebige doppelsträngige Boten-RNA",
+                "Eine langlebige einzelsträngige Boten-RNA",
+                "Eine langlebige doppelsträngige Boten-RNA"},
+            {"Wofür steht RNA ?", "Ribonukleinsäure",
+                "Radionukleinsäure",
+                        "Ribozymnukleidsäure",
+                "Ribozytnukleidsäure"},
+            {"Wodurch entsteht RNA ?", "Durch den Prozess der Transkription",
+                "Durch den Prozess der Translation",
+                "Durch den Tausch von Proteinen",
+                "Durch Transformation verschiedener Zellen"},
+            {"Was ist tRNA ?", "Ein Träger für Aminosäuren und wird bei der Translation benötigt",
+                "Ein wesentlicher Bestandteil für den Aufbau körpereigener Aminosäuren",
+                "Ein Baubestandteil der Ribosomen",
+                "Eine Blaupause für die Struktur und Funktion sämtlicher körpereigenen Proteine"},
+            {"Was ist rRNA ?", "Baubestandteil der Ribosomen und geben dem Ribosom gemeinsam mit Proteinen seine Struktur und Funktion",
+                "Eine Anbindungsstelle für Aminosäuren",
+                "Moleküle, die Vorläufer der Organismen waren",
+                "Eine Nukleinsäure, die sich als Polynukleotid aus einer Kette von vielen Nukleotiden zusammensetzt"},
+            {"An welchem sog. \"Hightech-Impfstoff\" gegen Corona wird momentan in Deutschland gearbeitet ?", "Ein mRNA-basierter Impfstoff",
+                "Ein tRNA-basierter Impfstoff",
+                "Ein rRNA-basierter Impfstoff",
+                "Ein Impfstoff auf Basis eines schon vorhandenen Ebola-Medikaments"},
+            {"Aus welchen elementaren organischen Basen besteht RNA ?", "Adenin - Guainin - Cytosin – Uracil",
+                "Adenin - Guainin - Cytosin – Thymin",
+                "Adenin - Guainin - Cytosin – Purin",
+                "Dextrin - Uracil - Cytosin – Adenin"},
+            {"Was beschreibt die sog. Inkubationszeit ?", "Die Zeit, die zwischen Infektion mit einem Krankheitserreger und dem Auftreten der ersten Symptome vergeht",
+                "Die Ansteckungsdauer nach Erstinfektion",
+                "Die durchschnittliche Krankheitsdauer",
+                "Die maximale Krankheitsdauer"},
+            {"Was beschreibt die sog. Inzidenzrate?", "Die Neuinfektionsrate innerhalb eines bestimmten Zeitraums",
+                "Die Vermehrungsrate des Virus innerhalb eines bestimmten Zeitraums",
+                "Die Wahrscheinlichkeit, sich von einem Virus anzustecken",
+                "Nichts davon"},
+            {"Was beschreibt die Koinzidenz ?", "Das gleichzeitige Auftreten von mehr als einer Infektion/Erkrankung bei einer Person",
+                "Die Vermehrungsrate eines Virus im Zusammenspiel eines anderen Virus",
+                "Die Wahrscheinlichkeit, mit der ein Virus unter bestimmten Bedingungen wachsen kann",
+                "Nichts davon"},
+            {"Was beschreibt die Letalität ?", "Die Tödlichkeit eines Virus unter definierten Bedingungen",
+                "Die Ausbreitungswahrscheinlichkeit eines Virus",
+                "Die Erkrankungswahrscheinlichkeit unter definierten Bedingungen",
+                "Nichts davon"},
+            {"Was beschreibt die Basismortalität ?", "Die Sterblichkeit in einer Normalsituation",
+                "Die Sterblichketit als Folge einer Häufung bestimmter Krankheiten",
+                "Das Verhältnis der Sterberate einer Studienpopulation zu der Sterberate in der Gesamtbevölkerung",
+                "Nichts davon"},
+            {"Was beschreibt die Exzessmortalität ?", "Die Übersterblichkeit als Folge einer Häufung bestimmter Erkrankungen",
+                "Die maximal mögliche Sterblichkeitsrate eines Virus",
+                "Die minimal mögliche Sterblichkeitsrate eines Virus",
+                "Die durchschnittliche Sterblichkeitsrate eines Virus"},
+            {"Was beschreibt die Resistenz unter infektionsepidemiologischem Aspekt ?", "Die Nichtanfälligkeit gegen Erreger",
+                "Die Nichtanfälligkeit eines Erregers",
+                "Die Widerstandskraft eines Erregers unter definierten Voraussetzungen",
+                "Nichts davon"},
+            {"Was beschreibt die Rezidivität ?", "Das Wiederauftreten klinischer Zeichen einer Infektion nach temporär erfolgreicher Abwehr",
+                "Die Widerstandskraft einer Person nach einer Infektion",
+                "Die Mutationswahrscheinlichkeit eines Virus unter definierten Bedingungen",
+                "Nichts davon"},
+            {"Was beschreibt die Sensitivität ?", "Die Wahrscheinlichkeit, mit der ein Test eine bestimmte Krankheit sicher erkennen kann",
+                "Die Wahrscheinlichkeit eines Virenzerfalls unter definierten Bedingungen",
+               "Die Virenanfälligkeit eines Menschen",
+                "Die Wahrscheinlichkeit einer Neuerkrankung eines Menschen nach überstandener Krankheit"},
+            {"Was beschreibt die Superinfektion ?", "Bei noch unvollständiger Immunität eine erneute Infektion durch den Erreger einer bestehenden Primärinfektion",
+                "Eine Infektion, die ohne Impfstoff nicht auskuriert werden kann",
+                "Eine biologische Superwaffe",
+                "Nichts davon"},
+            {"Was beschreibt die Primärinfektion ?", "Die Erstinfektion durch einen bestimmten Erreger",
+                "Die erste schwere Infektion eines Menschen",
+                "Die zeitlich zuerst auftretende Infektion bei einem Angriff verschiedener Viren",
+                "Nichts davon"},
+            {"Was ist ein Antigen ?", "Eine Substanz mit der Fähigkeit, immunologische Reaktionen in einem Organismus auszulösen",
+                "Ein Gegengift",
+                "Ein RNA-Strang zur Virenabwehr",
+                "Ein Gendefekt"},
+            {"Was ist ein Antiserum ?", "Ein Serumpräparat, das spezifische Antikörper enthält",
+                "Eine spezielle Toxinart",
+                "Ein Gegengift, welches bei Schlangenbissen verwendet wird",
+                "Eine spezielle Virenart"}
+             };
 
-    public Questions()
-    {
-        this.fragen = new String[1][5]; // TODO: Anzahl angeben
-        fillQuestions();
-
-    }
-
-    // Methode zum Auffülen der Fragen
-    private void fillQuestions()
-    {
-        fragen[0][0] = "Begrüssung?";
-        fragen[0][1] = "Begrüssung?";
-        fragen[0][2] = "Begrüssung?";
-        fragen[0][3] = "Begrüssung?";
-        fragen[0][4] = "Begrüssung?";
-    }
 /*
-    private void fillQuestionList(File file) throws FileNotFoundException
-    {
+    private Scanner zeilenscan;
 
-        questionsfile = new File("../../../../../Corona/Fragen");
-        zeilenscan = new Scanner(questionsfile);
+    public Questions() throws FileNotFoundException {
+        this.fragen = new String[49][5];
+        // TODO: Anzahl angeben
+        fillQuestions(new File());
+    }
+
+    // Befüllen des Fragen-Arrays
+    public void fillQuestions(File file) throws FileNotFoundException
+    {
+        zeilenscan = new Scanner(file);
 
         // Scanner holt sich die Fragen aus dem erstellten Textfile und speichert sie in das 2D-Array
         for(int i = 0; i < fragen.length; i++)
@@ -44,19 +267,14 @@ public class Questions
                 fragen[i][j] = zeilenscan.nextLine();
             }
         }
-
-        zeilenscan.close();
     }
 
-    */
 
-
-// Liefert die Liste der vorhandenen Fragen
+// Liefert das Array der vorhandenen Frage-Antowrten-Module
     public String[][] getFragen()
     {
-        return fragen;
+        return this.fragen;
     }
 
-
-
+*/
 }

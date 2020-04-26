@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class Gameover extends AppCompatActivity {
 
     private Button _nochmal;
+    private TextView _punktzahl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,9 @@ public class Gameover extends AppCompatActivity {
 
         _nochmal = (Button)findViewById(R.id.nochmal);
         _nochmal.setOnClickListener(this::loadMenue);
+
+        _punktzahl = (TextView)findViewById(R.id.punkteText);
+        _punktzahl.setText("Punktzahl: " + FragenActivity.punkte);
 
     }
 

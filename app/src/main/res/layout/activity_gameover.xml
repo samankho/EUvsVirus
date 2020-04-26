@@ -8,7 +8,7 @@
     tools:context=".Gameover">
 
     <TextView
-        android:id="@+id/glueckwunsch"
+        android:id="@+id/gameover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

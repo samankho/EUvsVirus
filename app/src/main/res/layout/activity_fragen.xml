@@ -16,7 +16,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="106dp"
         android:layout_marginEnd="0dp"
-        android:text="FRAGE PLACEHOLDER"
+        android:fontFamily="@font/adamina"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
@@ -24,19 +24,20 @@
 
     <Button
         android:id="@+id/antwortbtn1"
-        android:layout_width="166dp"
+        android:layout_width="170dp"
         android:layout_height="98dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginBottom="204dp"
         android:background="#ffffff"
+        android:fontFamily="sans-serif-medium"
         android:textColor="#1D014E"
         android:textSize="14sp" />
 
     <Button
         android:id="@+id/antwortbtn2"
-        android:layout_width="166dp"
+        android:layout_width="170dp"
         android:layout_height="98dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -47,7 +48,7 @@
 
     <Button
         android:id="@+id/antwortbtn3"
-        android:layout_width="166dp"
+        android:layout_width="170dp"
         android:layout_height="98dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
@@ -58,7 +59,7 @@
 
     <Button
         android:id="@+id/antwortbtn4"
-        android:layout_width="166dp"
+        android:layout_width="170dp"
         android:layout_height="98dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -66,5 +67,14 @@
         android:layout_marginBottom="76dp"
         android:background="#ffffff"
         android:textColor="#1D014E" />
+
+    <TextView
+        android:id="@+id/aktuellePunkte"
+        android:layout_width="171dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/amaranth"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
 
 </RelativeLayout>
