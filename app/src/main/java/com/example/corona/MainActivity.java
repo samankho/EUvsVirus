@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FragenActivity.punkte = 0;
+
         playbtn = (Button)findViewById(R.id.playbtn);
         playbtn.setOnClickListener(this::starteQuiz);
     }
